@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <title>User Experience Webpage</title>
+  <title>User Experience Webpage with Errors</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -26,7 +25,7 @@
     }
 
     nav a {
-      color: white;
+      color: #ccc; /* Low contrast text */
       margin: 10px;
       text-decoration: none;
     }
@@ -38,175 +37,59 @@
       border-radius: 5px;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-
     table, th, td {
       border: 1px solid #ddd;
-    }
-
-    th, td {
-      padding: 10px;
-      text-align: left;
-    }
-
-    button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #45a049;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Welcome to My User Experience Webpage</h1>
+    <h1>Welcome to My Webpage</h1>
   </header>
 
   <nav>
-    <a href="#home">Home</a>
+    <a href="#">Home</a>
+    <a href="#"> </a> <!-- Empty link -->
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section>
     <h2>Introduction</h2>
-    <p>This webpage demonstrates various HTML elements commonly used in web design.</p>
+    <p>This webpage demonstrates HTML elements with some accessibility issues.</p>
 
-    <!-- Headings -->
+    <!-- Skipped heading level -->
     <h1>Heading Level 1</h1>
-    <h2>Heading Level 2</h2>
-    <h3>Heading Level 3</h3>
-    <h4>Heading Level 4</h4>
-    <h5>Heading Level 5</h5>
-    <h6>Heading Level 6</h6>
+    <h3>Heading Level 3 (Skipped Level)</h3>
 
-    <!-- Hyperlink -->
-    <p>Visit <a href="https://www.example.com" target="_blank">Example.com</a> for more information.</p>
+    <!-- Image with missing alt text -->
+    <img src="https://via.placeholder.com/300x200">
 
-    <!-- Image -->
-    <h3>Sample Image</h3>
-    <img src="https://via.placeholder.com/300x200" alt="Placeholder Image" width="300" height="200"/>
+    <!-- Duplicate IDs -->
+    <p id="duplicate">This is a paragraph.</p>
+    <p id="duplicate">This is another paragraph with the same ID.</p>
 
-    <!-- Video -->
-    <h3>Sample Video</h3>
-    <video width="320" height="240" controls>
-      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <!-- Form with issues -->
+    <form>
+      <label>Name</label> <!-- Not associated with input -->
+      <input type="text" name="name">
+      <br><br>
 
-    <!-- Audio -->
-    <h3>Sample Audio</h3>
-    <audio controls>
-      <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
+      <!-- Missing label -->
+      <input type="email" name="email" placeholder="Email">
+      <br><br>
 
-    <!-- Unordered List -->
-    <h3>Unordered List</h3>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
-
-    <!-- Ordered List -->
-    <h3>Ordered List</h3>
-    <ol>
-      <li>First Step</li>
-      <li>Second Step</li>
-      <li>Third Step</li>
-    </ol>
-
-    <!-- Table -->
-    <h3>Sample Table</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
-          <th>Header 3</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Data 1</td>
-          <td>Data 2</td>
-          <td>Data 3</td>
-        </tr>
-        <tr>
-          <td>Data 4</td>
-          <td>Data 5</td>
-          <td>Data 6</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- Form Section -->
-    <h3>Contact Form</h3>
-    <form action="#" method="post">
-      <fieldset>
-        <legend>Personal Information</legend>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br><br>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" cols="50"></textarea>
-        <br><br>
-        <label for="dropdown">Choose an option:</label>
-        <select id="dropdown" name="dropdown">
-          <option value="option1">Option 1</option>
-          <option value="option2">Option 2</option>
-          <option value="option3">Option 3</option>
-        </select>
-        <br><br>
-        <button type="submit">Submit</button>
-      </fieldset>
+      <input type="submit" value="Send">
     </form>
+
+    <!-- Deprecated tag -->
+    <center>This is centered using a deprecated tag.</center>
   </section>
 
-  <article>
-    <h2>Article Section</h2>
-    <p>This is an example of an article section, which can contain relevant content or posts.</p>
-  </article>
-
-  <aside>
-    <h3>Related Information</h3>
-    <p>This is an aside section, which can contain supplementary content.</p>
-  </aside>
-
-  <div>
-    <h3>This is a Division Element</h3>
-    <p>The <code>&lt;div&gt;</code> element is used to group content.</p>
-  </div>
-
-  <!-- Inline Text Container -->
-  <p>This is an <span style="color: blue;">inline text container</span> element that can style specific text.</p>
-
   <footer>
-    <p>&copy; 2025 User Experience Webpage. All Rights Reserved.</p>
+    <p>&copy; 2025 All Rights Reserved.</p>
   </footer>
-
-  <!-- Script Section -->
-  <script>
-    console.log("JavaScript is working!");
-  </script>
 
 </body>
 </html>

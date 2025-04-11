@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Experience Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        section, article, aside {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to My User Experience Webpage</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section>
+        <h2>Introduction</h2>
+        <p>This webpage demonstrates various HTML elements commonly used in web design.</p>
+
+        <!-- Unordered List -->
+        <h3>Unordered List</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <!-- Ordered List -->
+        <h3>Ordered List</h3>
+        <ol>
+            <li>First Step</li>
+            <li>Second Step</li>
+            <li>Third Step</li>
+        </ol>
+
+        <!-- Table -->
+        <h3>Sample Table</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td>Data 3</td>
+                </tr>
+                <tr>
+                    <td>Data 4</td>
+                    <td>Data 5</td>
+                    <td>Data 6</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Form Section -->
+        <h3>Contact Form</h3>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea>
+                <br><br>
+                <label for="dropdown">Choose an option:</label>
+                <select id="dropdown" name="dropdown">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+                <br><br>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <!-- Article Section -->
+    <article>
+        <h2>Article Section</h2>
+        <p>This is an example of an article section, which can contain relevant content or posts.</p>
+    </article>
+
+    <!-- Aside Section -->
+    <aside>
+        <h3>Related Information</h3>
+        <p>This is an aside section, which can contain supplementary content.</p>
+    </aside>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 User Experience Webpage. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Division Section -->
+    <div>
+        <h3>This is a Division Element</h3>
+        <p>The <code>&lt;div&gt;</code> element is used to group content.</p>
+    </div>
+
+    <!-- Inline Text Container -->
+    <p>This is an <span style="color: blue;">inline text container</span> element that can style specific text.</p>
+
+    <!-- Script Section for JavaScript -->
+    <script>
+        console.log("JavaScript is working!");
+    </script>
+</body>
+</html>

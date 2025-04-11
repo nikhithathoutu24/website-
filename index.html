@@ -1,93 +1,195 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>User Experience Webpage</title>
+  <meta charset="UTF-8">
+  <title>Creative Studio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      box-sizing: border-box;
     }
 
-    header, footer {
-      background-color: #333;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2c3e50;
+      padding: 20px;
       color: white;
-      padding: 10px 0;
       text-align: center;
     }
 
     nav {
-      background-color: #444;
+      background-color: #34495e;
       padding: 10px;
+      text-align: center;
     }
 
     nav a {
-      color: #ccc;
-      margin: 10px;
+      color: white;
       text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
     }
 
-    section, article, aside {
-      margin: 20px;
+    .hero {
+      background-image: url('https://via.placeholder.com/1200x400');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 2em;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .services {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .service {
+      background-color: #fff;
       padding: 20px;
-      background-color: white;
-      border-radius: 5px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      flex: 1;
     }
 
-    table, th, td {
-      border: 1px solid #ddd;
+    img, video, audio {
+      margin-top: 15px;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    form input, form textarea, form select, form button {
+      display: block;
+      margin-top: 10px;
+      padding: 10px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Welcome to My Webpage</h1>
+    <h1>Creative Studio</h1>
+    <p>Design. Develop. Deliver.</p>
   </header>
 
   <nav>
     <a href="#">Home</a>
-    <a href="#"> </a> 
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="#">Services</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Contact</a>
   </nav>
 
-  <section>
-    <h2>Introduction</h2>
-    <p>This webpage demonstrates HTML elements with some accessibility issues.</p>
+  <div class="hero">
+    Transforming Ideas Into Reality
+  </div>
 
-    
-    <h1>Heading Level 1</h1>
-    <h3>Heading Level 3 (Skipped Level)</h3>
+  <main>
+    <section>
+      <h2>About Us</h2>
+      <p>We are a team of creatives passionate about building beautiful and functional web experiences. Here’s a glimpse of our space:</p>
+      <img src="https://via.placeholder.com/800x400" alt="Creative Studio Workspace">
+    </section>
 
+    <section>
+      <h2>Watch Our Promo</h2>
+      <video controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
 
-    <img src="https://via.placeholder.com/300x200">
+    <section>
+      <h2>Listen to Our Theme</h2>
+      <audio controls>
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+    </section>
 
+    <section>
+      <h2>Our Services</h2>
+      <div class="services">
+        <div class="service">
+          <h3>Web Design</h3>
+          <p>Clean, modern, and responsive designs tailored to your brand.</p>
+        </div>
+        <div class="service">
+          <h3>Development</h3>
+          <p>Fast and scalable websites using the latest web technologies.</p>
+        </div>
+        <div class="service">
+          <h3>SEO & Marketing</h3>
+          <p>Reach your audience with smart SEO strategies and content.</p>
+        </div>
+      </div>
+    </section>
 
-    <p id="duplicate">This is a paragraph.</p>
-    <p id="duplicate">This is another paragraph with the same ID.</p>
+    <section>
+      <h2>Get in Touch</h2>
+      <form>
+        <label>Name:</label>
+        <input type="text" name="name" required>
 
-  
-    <form>
-      <label>Name</label> 
-      <input type="text" name="name">
-      <br><br>
+        <label>Email:</label>
+        <input type="email" name="email" required>
 
+        <label>Message:</label>
+        <textarea name="message" rows="5"></textarea>
 
-      <input type="email" name="email" placeholder="Email">
-      <br><br>
+        <label>Service:</label>
+        <select>
+          <option value="design">Web Design</option>
+          <option value="development">Development</option>
+          <option value="marketing">Marketing</option>
+        </select>
 
-      <input type="submit" value="Send">
-    </form>
-
-    <center>This is centered using a deprecated tag.</center>
-  </section>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 All Rights Reserved.</p>
+    <p>&copy; 2025 Creative Studio. All rights reserved.</p>
   </footer>
 
 </body>

@@ -1,196 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Creative Studio</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-
-    header {
-      background-color: #2c3e50;
-      padding: 20px;
-      color: white;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #34495e;
-      padding: 10px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-
-    .hero {
-      background-image: url('https://via.placeholder.com/1200x400');
-      background-size: cover;
-      background-position: center;
-      height: 400px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-size: 2em;
-      text-shadow: 1px 1px 4px #000;
-    }
-
-    main {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    section {
-      margin-bottom: 40px;
-    }
-
-    h2 {
-      margin-bottom: 10px;
-      color: #2c3e50;
-    }
-
-    p {
-      line-height: 1.6;
-    }
-
-    .services {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .service {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      flex: 1;
-    }
-
-    img, video, audio {
-      margin-top: 15px;
-      max-width: 100%;
-      border-radius: 8px;
-    }
-
-    form input, form textarea, form select, form button {
-      display: block;
-      margin-top: 10px;
-      padding: 10px;
-      width: 100%;
-      max-width: 500px;
-    }
-
-    footer {
-      background-color: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Web Design</title>
+    <style>
+        /* CSS styles would go here */
+    </style>
 </head>
 <body>
+    <header role="banner">
+        <nav role="navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <header>
-    <h1>Creative Studio</h1>
-    <p>Design. Develop. Deliver.</p>
-  </header>
+    <main role="main" class="container">
+        <section id="home" class="hero">
+            <h1>Welcome to Accessible Web Design</h1>
+            <p>Creating accessible websites that are easy to use and engaging for all users.</p>
+        </section>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <a href="#">Portfolio</a>
-    <a href="#">Contact</a>
-  </nav>
+        <section id="about">
+            <h2>About Us</h2>
+            <img src="logo.png" alt="Accessible Web Design Logo" width="200" height="100">
+            <p>We provide accessible web design and development services that ensure your website is accessible to all users, including those with disabilities.</p>
+        </section>
 
-  <div class="hero">
-    Transforming Ideas Into Reality
-  </div>
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Web Design</li>
+                <li>Web Development</li>
+                <li>Accessibility Consulting</li>
+                <li>SEO Optimization</li>
+            </ul>
+        </section>
 
-  <main>
-    <section>
-      <h2>About Us</h2>
-      <p>We are a team of creatives passionate about building beautiful and functional web experiences. Here’s a glimpse of our space:</p>
-      <img src="https://via.placeholder.com/800x400" alt="Creative Studio Workspace">
-    </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
 
-    <section>
-      <h2>Watch Our Promo</h2>
-      <video controls>
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </section>
+    <footer role="contentinfo">
+        <p>&copy; 2023 Accessible Web Design. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
 
-    <section>
-      <h2>Listen to Our Theme</h2>
-      <audio controls>
-        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
-        Your browser does not support the audio tag.
-      </audio>
-    </section>
-
-    <section>
-      <h2>Our Services</h2>
-      <div class="services">
-        <div class="service">
-          <h3>Web Design</h3>
-          <p>Clean, modern, and responsive designs tailored to your brand.</p>
-        </div>
-        <div class="service">
-          <h3>Development</h3>
-          <p>Fast and scalable websites using the latest web technologies.</p>
-        </div>
-        <div class="service">
-          <h3>SEO & Marketing</h3>
-          <p>Reach your audience with smart SEO strategies and content.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Get in Touch</h2>
-      <form>
-        <label>Name:</label>
-        <input type="text" name="name" required>
-
-        <label>Email:</label>
-        <input type="email" name="email" required>
-
-        <label>Message:</label>
-        <textarea name="message" rows="5"></textarea>
-
-        <label>Service:</label>
-        <select>
-          <option value="design">Web Design</option>
-          <option value="development">Development</option>
-          <option value="marketing">Marketing</option>
-        </select>
-
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Creative Studio. All rights reserved.</p>
-  </footer>
-
+    <!-- Include any additional scripts -->
+    <script>
+        // JavaScript code would go here
+    </script>
 </body>
 </html>
